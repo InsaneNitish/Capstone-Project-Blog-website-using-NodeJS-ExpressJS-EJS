@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs")  %>
+
+<% if (locals.data) {%>
+  <% for (let i = 0; i < count; i++) { %>
+  <div class="card-group">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= data.title  %>
+        </h5>
+        <p class="card-text">
+          <%= data.blogContent  %>
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Blog created on <%= lastUpdatedTime %> - <%= data.authorName %></small>
+      </div>
+    </div>
+  </div>
+  
+<% } %>
+<%} else {%>
+  <h1>No Blog Posted Till Now.</h1>
+<%} %>
+
+
+
+  <%- include("partials/footer.ejs") %>
